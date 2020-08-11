@@ -18,6 +18,7 @@
           </e>
           <e p="movement" t="Include">
             <e p="Teleporter.cs" t="Include" />
+            <e p="TileMovement.cs" t="Include" />
           </e>
         </e>
         <e p="Samples" t="Include">

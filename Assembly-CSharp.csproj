@@ -61,6 +61,7 @@
      <Compile Include="Assets\Prototype\Selector\SelectionManager.cs" />
      <Compile Include="Assets\Prototype\Spells\Spell.cs" />
      <Compile Include="Assets\Prototype\movement\Teleporter.cs" />
+     <Compile Include="Assets\Prototype\movement\TileMovement.cs" />
      <None Include="Assets\Samples\Terrain Tools\0.1.0-preview\Terrain Assets\ThirdPartyNotices.txt" />
      <None Include="Assets\Fantasy Forest Environment Free Sample\StandardNoCulling.shader" />
  <Reference Include="Unity.Timeline.Editor">

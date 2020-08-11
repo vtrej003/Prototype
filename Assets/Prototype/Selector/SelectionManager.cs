@@ -8,7 +8,7 @@ public class SelectionManager : MonoBehaviour
     [SerializeField] private string selectableTag = "Selectable";
     [SerializeField] private Material highlightMaterial;
     [SerializeField] private Material defaultMaterial;
-    [SerializeField] public GameObject teleportObject;
+  
     private Transform _selection;
 
     // Update is called once per frame
@@ -28,17 +28,11 @@ public class SelectionManager : MonoBehaviour
             if (selection.CompareTag(selectableTag))
             {
                 Renderer selectionRenderer = selection.GetComponent<Renderer>();
-                Collider selectionCollider = selection.GetComponent<Collider>();
-                teleportObject.transform.position = selectionCollider.bounds.center;
                 if (selectionRenderer != null)
                 {
                     defaultMaterial = selectionRenderer.material;
                     selectionRenderer.material = highlightMaterial;
-                    
-
                 }
-
-                
             }
         }
     }
