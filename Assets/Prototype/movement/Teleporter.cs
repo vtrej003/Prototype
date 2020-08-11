@@ -72,14 +72,14 @@ public class Teleporter : MonoBehaviour
         yield return new WaitForSeconds(fadeTime);
         
         //*trying to lerp A to B ==============
-        step = mvSpeed * Time.deltaTime;
+        /*step = mvSpeed * Time.deltaTime;
 
         Vector3 nextPos = Vector3.MoveTowards(transform.position, translation, step);
         nextPos.y = Terrain.activeTerrain.SampleHeight(nextPos);
         
-        cameraRig.position += nextPos;
+        cameraRig.position += nextPos;*/
         //END OF LERP===========================
-        //cameraRig.position += translation;
+        cameraRig.position += translation;
         //fade to clear
         SteamVR_Fade.Start(Color.clear, fadeTime, true);
         //Deflag
