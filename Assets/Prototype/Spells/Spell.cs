@@ -10,7 +10,7 @@ public class Spell : MonoBehaviour
     [SerializeField] private ParticleSystem spell;
     public SteamVR_Action_Boolean spellAction;
     public SteamVR_Behaviour_Pose pose;
-    
+    //private LineRenderer spellLine;
     void Awake()
     {
         pose = GetComponent<SteamVR_Behaviour_Pose>();
@@ -18,7 +18,7 @@ public class Spell : MonoBehaviour
     
     void Start()
     {
-        
+       
     }
     
     
@@ -32,6 +32,10 @@ public class Spell : MonoBehaviour
             Transform selection = hit.transform;
             if (selection.CompareTag(selectableTag))
             {
+                //spellLine.SetPosition(0,transform.position);
+                //spellLine.SetPosition(1,selection.position);
+                //spellLine.SetWidth(1.0f,1.0f);
+                //spellLine.enabled = true;
                 Collider selectionCollider = selection.GetComponent<Collider>();
                 spell.transform.position = selectionCollider.bounds.center;
                 spell.Play();
